@@ -266,9 +266,13 @@
         self.locationManager.delegate = self;
         if (IS_OS_8_OR_LATER) {
             //[self.locationManager requestAlwaysAuthorization];
-            [self.locationManager requestWhenInUseAuthorization];
+//            [self.locationManager requestWhenInUseAuthorization];
+            if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [self.locationManager requestWhenInUseAuthorization];
+            }
         }
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+//        self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         [self.locationManager startUpdatingLocation];
     }
     

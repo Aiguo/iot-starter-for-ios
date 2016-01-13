@@ -24,7 +24,7 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>IoTStarter requires use of your location</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main_iPhone</string>
